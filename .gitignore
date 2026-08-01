@@ -1,0 +1,19 @@
+# Python virtual environment
+backend/venv/
+
+# Python cache
+**/__pycache__/
+*.py[cod]
+
+# Django
+backend/db.sqlite3
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Flutter
+frontend/.dart_tool/
+frontend/build/
