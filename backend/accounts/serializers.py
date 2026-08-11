@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from .models import Transaction
 
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
@@ -15,3 +16,9 @@ class RegisterSerializer(serializers.ModelSerializer):
         )
 
         return user
+class TransactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = ["id","amount","transaction_type","bank","merchant","category","transaction_at","original_sms",
+        ]
+        read_only_fields = ["id"]
