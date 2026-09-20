@@ -22,3 +22,13 @@ class TransactionSerializer(serializers.ModelSerializer):
         fields = ["id","amount","transaction_type","bank","merchant","category","transaction_at","original_sms",
         ]
         read_only_fields = ["id"]
+class TransactionUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = [
+            "amount",
+            "transaction_type",
+            "bank",
+            "merchant",
+            "category",
+        ]
